@@ -107,6 +107,7 @@ class HolaMundo {
 	}
 
 	public function getPalabra(){
+		$this->palabraSeleccionada = 'ornitorrinco';
 		return $this->$palabraSeleccionada;
 	}
 }
