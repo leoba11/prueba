@@ -2,7 +2,7 @@
   
 /**
  * 
- * Copyright (c) 2005-2015, Braulio José Solano Rojas
+ * Copyright (c) 2005-2015, Braulio Josï¿½ Solano Rojas
  * All rights reserved.
  * 
  * Redistribution and use in source and binary forms, with or without modification, are
@@ -38,17 +38,32 @@
 
 
 /**
- * HolaMundo Clase que implementa el típico primer ejemplo de programación en todo lenguaje.
+ * HolaMundo Clase que implementa el tï¿½pico primer ejemplo de programaciï¿½n en todo lenguaje.
  * 
  * @package SoapDiscovery
- * @author Braulio José Solano Rojas
- * @copyright Copyright (c) 2005-2015 Braulio José Solano Rojas
+ * @author Braulio Josï¿½ Solano Rojas
+ * @copyright Copyright (c) 2005-2015 Braulio Josï¿½ Solano Rojas
  * @version $Id$
  * @access public
  **/
 class HolaMundo {
+	private $palabraSeleccionada = "";
 	private $nombre = '';
 	private $ultimo_saludo = '';
+	private $palabras = array(
+		1 => "perro",
+		2 => "gato",
+		3 => "elefante",
+		4 => "lobo",
+		5 => "perico",
+		6 => "serpiente",
+		7 => "garrapata",
+		8 => "oso",
+		9 => "tigre",
+		10 => "pantera",
+		11 => "zorro",
+		12 => "vaca"
+	);
 	
 	/**
 	 * HolaMundo::__construct() Constructor de la clase HolaMundo.
@@ -58,10 +73,11 @@ class HolaMundo {
 	 **/
 	public function __construct($nombre = 'Mundo') {
 		$this->nombre = $nombre;
+		$this->palabraSeleccionada = $this->palabras[rand(1, 12)];
 	}
 	
 	/**
-	 * HolaMundo::salude() Saluda al Mundo o a $this->nombre o saluda a $nombre si $nombre no es vacío.
+	 * HolaMundo::salude() Saluda al Mundo o a $this->nombre o saluda a $nombre si $nombre no es vacï¿½o.
 	 * 
 	 * @param string $nombre
 	 * @return string
@@ -88,6 +104,10 @@ class HolaMundo {
 	 **/
 	public function ultimoSaludo() {
 		return 'Saludo guardado:  '.$this->ultimo_saludo;
+	}
+
+	public function getPalabra(){
+		return $this->$palabraSeleccionada;
 	}
 }
 

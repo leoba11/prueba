@@ -39,6 +39,12 @@
 		<part name="return" type="xsd:string"/>
 	</message>
 
+	<message name="getPalabraIn"/>
+
+	<message name="getPalabraOut">
+		<part name="return" type="xsd:string"/>
+	</message>
+
 	<!-- Puerto para comunicar con la clase HolaMundo, "ECCI_HolaMundo" -->
 
 	<portType name="ECCI_HolaMundoPort">
@@ -56,6 +62,11 @@
 			<documentation>HolaMundo::ultimoSaludo() Devuelve el saludo guardado en la propiedad ultimo_saludo.</documentation>
 			<input message="tns:ultimoSaludoIn"/>
 			<output message="tns:ultimoSaludoOut"/>
+		</operation>
+		<operation name="getPalabra">
+			<documentation>HolaMundo::ultimoSaludo() Devuelve el saludo guardado en la propiedad ultimo_saludo.</documentation>
+			<input message="tns:getPalabraIn"/>
+			<output message="tns:getPalabraOut"/>
 		</operation>
 	</portType>
 
@@ -94,6 +105,20 @@
 		
 		<operation name="ultimoSaludo">
 			<soap:operation soapAction="urn:ECCI_HolaMundo#HolaMundo#ultimoSaludo"/>
+			<input>
+				<soap:body use="encoded"
+				           encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						   namespace="urn:ECCI_HolaMundo"/>
+			</input>
+			<output>
+				<soap:body use="encoded"
+				           encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						   namespace="urn:ECCI_HolaMundo"/>
+			</output>
+		</operation>
+
+		<operation name="getPalabra">
+			<soap:operation soapAction="urn:ECCI_HolaMundo#HolaMundo#getPalabra"/>
 			<input>
 				<soap:body use="encoded"
 				           encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
