@@ -73,7 +73,7 @@ class HolaMundo {
 	 **/
 	public function __construct($nombre = 'Mundo') {
 		$this->nombre = $nombre;
-		$this->palabraSeleccionada = $this->palabras[rand(1, 12)];
+		//$this->palabraSeleccionada = $this->palabras[rand(1, 12)];
 	}
 	
 	/**
