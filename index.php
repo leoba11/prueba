@@ -36,11 +36,11 @@
  * @copyright 2005-2015, Braulio José Solano Rojas
  */
 
-require_once 'HolaMundo.class.php';
+require_once 'Ahorcado.class.php';
  
 if (isset($_GET['wsdl'])) {
 	header('Content-Type: application/soap+xml; charset=utf-8');
-	echo file_get_contents('HolaMundo.wsdl');
+	echo file_get_contents('Ahorcado.wsdl');
 }
 else {
 	session_start();
@@ -53,7 +53,7 @@ else {
 		exit;
 	}
 
-	$servidorSoap->setClass('HolaMundo');
+	$servidorSoap->setClass('Ahorcado');
 	$servidorSoap->setPersistence(SOAP_PERSISTENCE_SESSION);
 	$servidorSoap->handle();
 }

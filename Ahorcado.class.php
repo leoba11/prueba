@@ -46,10 +46,10 @@
  * @version $Id$
  * @access public
  **/
-class HolaMundo {
+class Ahorcado {
 	private $palabraSeleccionada = "";
-	private $nombre = '';
-	private $ultimo_saludo = '';
+	private $nombre = "";
+	private $ultimo_saludo = "";
 	private $palabras = array(
 		1 => "perro",
 		2 => "gato",
@@ -66,7 +66,7 @@ class HolaMundo {
 	);
 	
 	/**
-	 * HolaMundo::__construct() Constructor de la clase HolaMundo.
+	 * Ahorcado::__construct() Constructor de la clase Ahorcado.
 	 * 
 	 * @param string $nombre
 	 * @return string
