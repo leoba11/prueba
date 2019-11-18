@@ -48,6 +48,7 @@
  **/
 class Ahorcado {
 	private $palabraSeleccionada = "";
+	private $palabraOculta = "";
 	private $turnosRestantes = 5;
 	private $exitos = "";
 	private $gano = 0;
@@ -129,6 +130,19 @@ class Ahorcado {
 		}
 
 		return $this->gano;
+	}
+
+	/**
+	 * Ahorcado::getPalabraOculta() Devuelve una palabra al azar oculta con _.
+	 * 
+	 * @return string 
+	 **/
+	public function getPalabraOculta(){
+		for($i=0; $i < strlen($this->palabraSeleccionada); $i++)
+		{
+			$this->palabraOculta = $this.palabraOculta." _";
+		}
+		return $this->palabraOculta ;
 	}
 
 	/**

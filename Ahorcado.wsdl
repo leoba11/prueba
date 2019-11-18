@@ -39,6 +39,12 @@
 		<part name="return" type="xsd:int"/>
 	</message>
 
+	<message name="getPalabraOcultaIn"/>
+
+	<message name="getPalabraOcultaOut">
+		<part name="return" type="xsd:string"/>
+	</message>
+
 	<message name="getPalabraIn"/>
 
 	<message name="getPalabraOut">
@@ -63,8 +69,13 @@
 			<input message="tns:verificarSiGanoIn"/>
 			<output message="tns:verificarSiGanoOut"/>
 		</operation>
+		<operation name="getPalabraOculta">
+			<documentation>HolaMundo::getPalabraOculta() Devuelve los '_ '.</documentation>
+			<input message="tns:getPalabraOcultaIn"/>
+			<output message="tns:getPalabraOcultaOut"/>
+		</operation>
 		<operation name="getPalabra">
-			<documentation>HolaMundo::ultimoSaludo() Devuelve el saludo guardado en la propiedad ultimo_saludo.</documentation>
+			<documentation>HolaMundo::getPalabra() Devuelve la palabra seleccionada.</documentation>
 			<input message="tns:getPalabraIn"/>
 			<output message="tns:getPalabraOut"/>
 		</operation>
@@ -105,6 +116,20 @@
 		
 		<operation name="verificarSiGano">
 			<soap:operation soapAction="urn:ECCI_Ahorcado#Ahorcado#verificarSiGano"/>
+			<input>
+				<soap:body use="encoded"
+				           encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						   namespace="urn:ECCI_Ahorcado"/>
+			</input>
+			<output>
+				<soap:body use="encoded"
+				           encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						   namespace="urn:ECCI_Ahorcado"/>
+			</output>
+		</operation>
+
+		<operation name="getPalabraOculta">
+			<soap:operation soapAction="urn:ECCI_Ahorcado#Ahorcado#getPalabraOculta"/>
 			<input>
 				<soap:body use="encoded"
 				           encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
