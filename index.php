@@ -44,7 +44,7 @@ if (isset($_GET['wsdl'])) {
 }
 else {
 	session_start();
-	$servidorSoap = new SoapServer('http://titanic.ecci.ucr.ac.cr:80/~eb50946/prueba/?wsdl');
+	$servidorSoap = new SoapServer('http://titanic.ecci.ucr.ac.cr:80/~eb50946/prueba/?wsdl', array('cache_wsdl' => WSDL_CACHE_NONE));
 
 	//Para evitar la excepción por defecto de SOAP PHP cuando no existe HTTP_RAW_POST_DATA,
 	//se regresa explícitamente el siguiente fallo cuando no hay solicitud (v.b. desde un navegador)
