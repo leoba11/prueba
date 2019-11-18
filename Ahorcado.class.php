@@ -48,8 +48,8 @@
  **/
 class Ahorcado {
 	private $palabraSeleccionada = "";
-	private $nombre = "";
-	private $ultimo_saludo = "";
+	private $turnosRestantes = 5;
+	private $exitos = "";
 	private $palabras = array(
 		1 => "perro",
 		2 => "gato",
@@ -68,44 +68,71 @@ class Ahorcado {
 	/**
 	 * Ahorcado::__construct() Constructor de la clase Ahorcado.
 	 * 
-	 * @param string $nombre
 	 * @return string
 	 **/
-	public function __construct($nombre = 'Mundo') {
-		$this->nombre = $nombre;
+	public function __construct() {
 		$this->palabraSeleccionada =  $this->palabras[rand(1, 12)];
 	}
-	
+
 	/**
-	 * HolaMundo::salude() Saluda al Mundo o a $this->nombre o saluda a $nombre si $nombre no es vac o.
+	 * Ahorcado::verificarLetra() verifica si la letra se encuentra en la palabra.
 	 * 
-	 * @param string $nombre
-	 * @return string
-	 **/
-	public function salude($nombre = '') {
-		$nombre = $nombre?$nombre:$this->nombre;
-		$this->ultimo_saludo = 'Hola '.$nombre.'.';
-		return $this->ultimo_saludo;
-	}
-	
-	/**
-	 * HolaMundo::servidorEstampillaDeTiempo() Devuelve el tiempo del servidor.
-	 * 
+	 * @param string $letra
 	 * @return string 
 	 **/
-	public function servidorEstampillaDeTiempo() {
-		return time();
-	}
-	
-	/**
-	 * HolaMundo::ultimoSaludo() Devuelve el saludo guardado en la propiedad ultimo_saludo.
-	 * 
-	 * @return string 
-	 **/
-	public function ultimoSaludo() {
-		return 'Saludo guardado:  '.$this->ultimo_saludo;
+	public function verificarLetra($letra = ''){
+		$this->turnosRestantes =  $this->turnosRestantes - 1;
+		$verificacion = "";
+		
+		$arrayPalabra = str_split($this->palabraSeleccionada);
+		foreach($arrayPalabra as $char){
+			if($letra == $char){
+				$verificacion = $verificacion + "T";
+				$this->$exitos = $this->$exitos + "T";
+			}else{
+				$verificacion = $verificacion + "F";
+				$this->exitos = $this->exitos + "F";
+			}
+		}
+		return $verificacion
 	}
 
+
+	/**
+	 * Ahorcado::getIntentosRestantes() Devuelve cantidad de intentos que faltan.
+	 * 
+	 * @return int 
+	 **/
+	public function getIntentosRestantes(){
+		return $this->$turnosRestantes;
+	}
+
+
+	/**
+	 * Ahorcado::verificarSiGano() Devuelve 1 si gano, 0 si no.
+	 * 
+	 * @return int 
+	 **/
+	public function verificarSiGano(){
+		$gano = 0;
+		$auxCont = 0;
+		foreach($this->$arrayExitos as $val){
+			if($val == 1){
+				$auxCont = $auxCont + 1;
+			}
+		}
+		if($auxCont == $strlen($this->$arrayExitos)){
+			$gano = 1;
+		}
+
+		return $gano;
+	}
+
+	/**
+	 * Ahorcado::getPalabras() Devuelve una palabra al azar.
+	 * 
+	 * @return string 
+	 **/
 	public function getPalabra(){
 		return $this->palabraSeleccionada;
 	}

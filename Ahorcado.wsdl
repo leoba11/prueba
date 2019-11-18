@@ -19,24 +19,24 @@
 
 	<!-- Mensajes para comunicarse con la clase Ahorcado. -->
 
-	<message name="saludeIn">
-		<part name="nombre" type="xsd:string"/>
+	<message name="verificarLetraIn">
+		<part name="letra" type="xsd:string"/>
 	</message>
 
-	<message name="saludeOut">
+	<message name="verificarLetraOut">
 		<part name="return" type="xsd:string"/>
 	</message>
 
-	<message name="servidorEstampillaDeTiempoIn"/>
+	<message name="getIntentosRestantesIn"/>
 
-	<message name="servidorEstampillaDeTiempoOut">
-		<part name="return" type="xsd:string"/>
+	<message name="getIntentosRestantesOut">
+		<part name="return" type="xsd:int"/>
 	</message>
 
-	<message name="ultimoSaludoIn"/>
+	<message name="verificarSiGanoIn"/>
 
-	<message name="ultimoSaludoOut">
-		<part name="return" type="xsd:string"/>
+	<message name="verificarSiGanoOut">
+		<part name="return" type="xsd:int"/>
 	</message>
 
 	<message name="getPalabraIn"/>
@@ -48,20 +48,20 @@
 	<!-- Puerto para comunicar con la clase Ahorcado, "ECCI_Ahorcado" -->
 
 	<portType name="ECCI_AhorcadoPort">
-		<operation name="salude">
-			<documentation>Ahorcado::salude() Saluda al Mundo o a $this-&gt;nombre o saluda a $nombre si $nombre no es vacío.</documentation>
-			<input message="tns:saludeIn"/>
-			<output message="tns:saludeOut"/>
+		<operation name="verificarLetra">
+			<documentation>Ahorcado::verificarLetra() Verifica si la letra esta en la palabra.</documentation>
+			<input message="tns:verificarLetraIn"/>
+			<output message="tns:verificarLetraOut"/>
 		</operation>
-		<operation name="servidorEstampillaDeTiempo">
-			<documentation>HolaMundo::servidorEstampillaDeTiempo() Devuelve el tiempo del servidor.</documentation>
-			<input message="tns:servidorEstampillaDeTiempoIn"/>
-			<output message="tns:servidorEstampillaDeTiempoOut"/>
+		<operation name="getIntentosRestantes">
+			<documentation>HolaMundo::getIntentosRestantes() Devuelve los intentos.</documentation>
+			<input message="tns:getIntentosRestantesIn"/>
+			<output message="tns:getIntentosRestantesOut"/>
 		</operation>
-		<operation name="ultimoSaludo">
-			<documentation>HolaMundo::ultimoSaludo() Devuelve el saludo guardado en la propiedad ultimo_saludo.</documentation>
-			<input message="tns:ultimoSaludoIn"/>
-			<output message="tns:ultimoSaludoOut"/>
+		<operation name="verificarSiGano">
+			<documentation>HolaMundo::verificarSiGano() Devuelve 1 si gano sino 0.</documentation>
+			<input message="tns:verificarSiGanoIn"/>
+			<output message="tns:verificarSiGanoOut"/>
 		</operation>
 		<operation name="getPalabra">
 			<documentation>HolaMundo::ultimoSaludo() Devuelve el saludo guardado en la propiedad ultimo_saludo.</documentation>
@@ -75,8 +75,8 @@
 	<binding name="ECCI_AhorcadoBinding" type="tns:ECCI_AhorcadoPort">
 		<soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
 		
-		<operation name="salude">
-			<soap:operation soapAction="urn:ECCI_Ahorcado#Ahorcado#salude"/>
+		<operation name="verificarLetra">
+			<soap:operation soapAction="urn:ECCI_Ahorcado#Ahorcado#verificarLetra"/>
 			<input>
 				<soap:body use="encoded"
 				           encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
@@ -89,8 +89,8 @@
 			</output>
 		</operation>
 		
-		<operation name="servidorEstampillaDeTiempo">
-			<soap:operation soapAction="urn:ECCI_Ahorcado#Ahorcado#servidorEstampillaDeTiempo"/>
+		<operation name="getIntentosRestantes">
+			<soap:operation soapAction="urn:ECCI_Ahorcado#Ahorcado#getIntentosRestantes"/>
 			<input>
 				<soap:body use="encoded"
 				           encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
@@ -103,8 +103,8 @@
 			</output>
 		</operation>
 		
-		<operation name="ultimoSaludo">
-			<soap:operation soapAction="urn:ECCI_Ahorcado#Ahorcado#ultimoSaludo"/>
+		<operation name="verificarSiGano">
+			<soap:operation soapAction="urn:ECCI_Ahorcado#Ahorcado#verificarSiGano"/>
 			<input>
 				<soap:body use="encoded"
 				           encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
