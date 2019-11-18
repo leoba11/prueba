@@ -2,7 +2,7 @@
   
 /**
  * 
- * Copyright (c) 2005-2015, Braulio Jos� Solano Rojas
+ * Copyright (c) 2005-2015, Braulio Jos  Solano Rojas
  * All rights reserved.
  * 
  * Redistribution and use in source and binary forms, with or without modification, are
@@ -38,11 +38,11 @@
 
 
 /**
- * HolaMundo Clase que implementa el t�pico primer ejemplo de programaci�n en todo lenguaje.
+ * HolaMundo Clase que implementa el t pico primer ejemplo de programaci n en todo lenguaje.
  * 
  * @package SoapDiscovery
- * @author Braulio Jos� Solano Rojas
- * @copyright Copyright (c) 2005-2015 Braulio Jos� Solano Rojas
+ * @author Braulio Jos  Solano Rojas
+ * @copyright Copyright (c) 2005-2015 Braulio Jos  Solano Rojas
  * @version $Id$
  * @access public
  **/
@@ -73,11 +73,11 @@ class HolaMundo {
 	 **/
 	public function __construct($nombre = 'Mundo') {
 		$this->nombre = $nombre;
-		//$this->palabraSeleccionada = $this->palabras[rand(1, 12)];
+		$this->palabraSeleccionada =  $this->palabras[rand(1, 12)];
 	}
 	
 	/**
-	 * HolaMundo::salude() Saluda al Mundo o a $this->nombre o saluda a $nombre si $nombre no es vac�o.
+	 * HolaMundo::salude() Saluda al Mundo o a $this->nombre o saluda a $nombre si $nombre no es vac o.
 	 * 
 	 * @param string $nombre
 	 * @return string
@@ -107,8 +107,7 @@ class HolaMundo {
 	}
 
 	public function getPalabra(){
-		$this->palabraSeleccionada = 'ornitorrinco';
-		return $this->$palabraSeleccionada;
+		return $this->palabraSeleccionada;
 	}
 }
 
