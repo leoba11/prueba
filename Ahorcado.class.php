@@ -50,6 +50,7 @@ class Ahorcado {
 	private $palabraSeleccionada = "";
 	private $turnosRestantes = 5;
 	private $exitos = "";
+	private $gano = 0;
 	private $palabras = array(
 		1 => "perro",
 		2 => "gato",
@@ -87,11 +88,11 @@ class Ahorcado {
 		$arrayPalabra = str_split($this->palabraSeleccionada);
 		foreach($arrayPalabra as $char){
 			if($letra == $char){
-				$verificacion = $verificacion + "T";
-				$this->$exitos = $this->$exitos + "T";
+				$verificacion = $verificacion."T";
+				$this->$exitos = $this->$exitos."T";
 			}else{
-				$verificacion = $verificacion + "F";
-				$this->exitos = $this->exitos + "F";
+				$verificacion = $verificacion."F";
+				$this->exitos = $this->exitos."F";
 			}
 		}
 		return $verificacion;
@@ -114,14 +115,14 @@ class Ahorcado {
 	 * @return int 
 	 **/
 	public function verificarSiGano(){
-		$gano = 0;
 		$auxCont = 0;
-		foreach($this->arrayExitos as $val){
-			if($val == 1){
+		$arrayPalabra = str_split($this->exitos);
+		foreach($arrayPalabra as $val){
+			if($val == "T"){
 				$auxCont = $auxCont + 1;
 			}
 		}
-		if($auxCont == $strlen($this->arrayExitos)){
+		if($auxCont == $strlen($this->arrayPalabra)){
 			$gano = 1;
 		}
 
