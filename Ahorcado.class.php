@@ -104,7 +104,7 @@ class Ahorcado {
 	 * @return int 
 	 **/
 	public function getIntentosRestantes(){
-		return $this->$turnosRestantes;
+		return $this->turnosRestantes;
 	}
 
 

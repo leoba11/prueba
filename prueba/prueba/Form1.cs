@@ -35,8 +35,7 @@ namespace prueba
         private void Label1_Click(object sender, EventArgs e)
         {
             AhorcadoService.ECCI_AhorcadoPortClient animal = new AhorcadoService.ECCI_AhorcadoPortClient();
-            label1.Text = animal.getPalabra();
-
+            label1.Text = animal.getIntentosRestantes().ToString();
         }
     }
 }
