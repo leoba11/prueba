@@ -123,10 +123,10 @@ class Ahorcado {
 			}
 		}
 		if($auxCont == $strlen($this->arrayPalabra)){
-			$gano = 1;
+			$this->gano = 1;
 		}
 
-		return $gano;
+		return $this->gano;
 	}
 
 	/**
