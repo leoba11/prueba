@@ -8,74 +8,74 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace prueba.ServiceReference1 {
+namespace prueba.AhorcadoService {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="urn:ECCI_HolaMundo", ConfigurationName="ServiceReference1.ECCI_HolaMundoPort")]
-    public interface ECCI_HolaMundoPort {
+    [System.ServiceModel.ServiceContractAttribute(Namespace="urn:ECCI_Ahorcado", ConfigurationName="AhorcadoService.ECCI_AhorcadoPort")]
+    public interface ECCI_AhorcadoPort {
         
-        [System.ServiceModel.OperationContractAttribute(Action="urn:ECCI_HolaMundo#HolaMundo#salude", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="urn:ECCI_Ahorcado#Ahorcado#salude", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         string salude(string nombre);
         
-        [System.ServiceModel.OperationContractAttribute(Action="urn:ECCI_HolaMundo#HolaMundo#salude", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="urn:ECCI_Ahorcado#Ahorcado#salude", ReplyAction="*")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         System.Threading.Tasks.Task<string> saludeAsync(string nombre);
         
-        [System.ServiceModel.OperationContractAttribute(Action="urn:ECCI_HolaMundo#HolaMundo#servidorEstampillaDeTiempo", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="urn:ECCI_Ahorcado#Ahorcado#servidorEstampillaDeTiempo", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         string servidorEstampillaDeTiempo();
         
-        [System.ServiceModel.OperationContractAttribute(Action="urn:ECCI_HolaMundo#HolaMundo#servidorEstampillaDeTiempo", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="urn:ECCI_Ahorcado#Ahorcado#servidorEstampillaDeTiempo", ReplyAction="*")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         System.Threading.Tasks.Task<string> servidorEstampillaDeTiempoAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="urn:ECCI_HolaMundo#HolaMundo#ultimoSaludo", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="urn:ECCI_Ahorcado#Ahorcado#ultimoSaludo", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         string ultimoSaludo();
         
-        [System.ServiceModel.OperationContractAttribute(Action="urn:ECCI_HolaMundo#HolaMundo#ultimoSaludo", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="urn:ECCI_Ahorcado#Ahorcado#ultimoSaludo", ReplyAction="*")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         System.Threading.Tasks.Task<string> ultimoSaludoAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="urn:ECCI_HolaMundo#HolaMundo#getPalabra", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="urn:ECCI_Ahorcado#Ahorcado#getPalabra", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         string getPalabra();
         
-        [System.ServiceModel.OperationContractAttribute(Action="urn:ECCI_HolaMundo#HolaMundo#getPalabra", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="urn:ECCI_Ahorcado#Ahorcado#getPalabra", ReplyAction="*")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         System.Threading.Tasks.Task<string> getPalabraAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ECCI_HolaMundoPortChannel : prueba.ServiceReference1.ECCI_HolaMundoPort, System.ServiceModel.IClientChannel {
+    public interface ECCI_AhorcadoPortChannel : prueba.AhorcadoService.ECCI_AhorcadoPort, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ECCI_HolaMundoPortClient : System.ServiceModel.ClientBase<prueba.ServiceReference1.ECCI_HolaMundoPort>, prueba.ServiceReference1.ECCI_HolaMundoPort {
+    public partial class ECCI_AhorcadoPortClient : System.ServiceModel.ClientBase<prueba.AhorcadoService.ECCI_AhorcadoPort>, prueba.AhorcadoService.ECCI_AhorcadoPort {
         
-        public ECCI_HolaMundoPortClient() {
+        public ECCI_AhorcadoPortClient() {
         }
         
-        public ECCI_HolaMundoPortClient(string endpointConfigurationName) : 
+        public ECCI_AhorcadoPortClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public ECCI_HolaMundoPortClient(string endpointConfigurationName, string remoteAddress) : 
+        public ECCI_AhorcadoPortClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public ECCI_HolaMundoPortClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public ECCI_AhorcadoPortClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public ECCI_HolaMundoPortClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public ECCI_AhorcadoPortClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         

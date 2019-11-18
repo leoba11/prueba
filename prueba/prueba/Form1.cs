@@ -19,8 +19,7 @@ namespace prueba
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            ServiceReference1.ECCI_HolaMundoPortClient hola = new ServiceReference1.ECCI_HolaMundoPortClient();
-            MessageBox.Show(hola.getPalabra());
+     
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -35,7 +34,7 @@ namespace prueba
 
         private void Label1_Click(object sender, EventArgs e)
         {
-            ServiceReference1.ECCI_HolaMundoPortClient animal = new ServiceReference1.ECCI_HolaMundoPortClient();
+            AhorcadoService.ECCI_AhorcadoPortClient animal = new AhorcadoService.ECCI_AhorcadoPortClient();
             label1.Text = animal.getPalabra();
 
         }

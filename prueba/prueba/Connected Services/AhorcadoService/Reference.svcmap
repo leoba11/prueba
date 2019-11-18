@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4f040907-8ab5-44f1-b9c3-7330c1b154a4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0bf0153f-f133-4fe5-babf-720d7c1a52ea" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,10 +19,10 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://titanic.ecci.ucr.ac.cr:80/~eb50946/prueba/HolaMundo.wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://titanic.ecci.ucr.ac.cr:80/~eb50946/prueba/Ahorcado.wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ECCI_HolaMundo.wsdl" MetadataType="Wsdl" ID="3e163515-795e-4fa8-b79c-e248d7b8dcb3" SourceId="1" SourceUrl="http://titanic.ecci.ucr.ac.cr/~eb50946/prueba/HolaMundo.wsdl" />
+    <MetadataFile FileName="ECCI_Ahorcado.wsdl" MetadataType="Wsdl" ID="95eb809a-bd8e-485c-b308-8f2e0d2c2ca2" SourceId="1" SourceUrl="http://titanic.ecci.ucr.ac.cr/~eb50946/prueba/Ahorcado.wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

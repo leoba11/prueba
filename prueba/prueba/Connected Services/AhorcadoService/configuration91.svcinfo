@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="LagNkVFR2H4s6f9883h5na3txYE=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="DsKNsSeQ/hmri6cXDvNyRDqdaSU=">
   <bindingConfigurations>
-    <bindingConfiguration bindingType="basicHttpBinding" name="ECCI_HolaMundoBinding">
+    <bindingConfiguration bindingType="basicHttpBinding" name="ECCI_AhorcadoBinding">
       <properties>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>ECCI_HolaMundoBinding</serializedValue>
+          <serializedValue>ECCI_AhorcadoBinding</serializedValue>
         </property>
         <property path="/closeTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -112,7 +112,7 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="ECCI_HolaMundoPort" contract="ServiceReference1.ECCI_HolaMundoPort" bindingType="basicHttpBinding" address="http://titanic.ecci.ucr.ac.cr/~eb50946/prueba/" bindingConfiguration="ECCI_HolaMundoBinding">
+    <endpoint name="ECCI_AhorcadoPort" contract="AhorcadoService.ECCI_AhorcadoPort" bindingType="basicHttpBinding" address="http://titanic.ecci.ucr.ac.cr/~eb50946/prueba/" bindingConfiguration="ECCI_AhorcadoBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://titanic.ecci.ucr.ac.cr/~eb50946/prueba/</serializedValue>
@@ -124,10 +124,10 @@
           <serializedValue>basicHttpBinding</serializedValue>
         </property>
         <property path="/bindingConfiguration" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>ECCI_HolaMundoBinding</serializedValue>
+          <serializedValue>ECCI_AhorcadoBinding</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>ServiceReference1.ECCI_HolaMundoPort</serializedValue>
+          <serializedValue>AhorcadoService.ECCI_AhorcadoPort</serializedValue>
         </property>
         <property path="/headers" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.AddressHeaderCollectionElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.AddressHeaderCollectionElement</serializedValue>
@@ -187,7 +187,7 @@
           <serializedValue>False</serializedValue>
         </property>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>ECCI_HolaMundoPort</serializedValue>
+          <serializedValue>ECCI_AhorcadoPort</serializedValue>
         </property>
         <property path="/kind" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

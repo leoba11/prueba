@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:ECCI_HolaMundo" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns="http://schemas.xmlsoap.org/wsdl/" name="ECCI_HolaMundo" targetNamespace="urn:ECCI_HolaMundo" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:ECCI_Ahorcado" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns="http://schemas.xmlsoap.org/wsdl/" name="ECCI_Ahorcado" targetNamespace="urn:ECCI_Ahorcado" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
-    <xsd:schema targetNamespace="urn:ECCI_HolaMundo" />
+    <xsd:schema targetNamespace="urn:ECCI_Ahorcado" />
   </wsdl:types>
   <wsdl:message name="saludeIn">
     <wsdl:part name="nombre" type="xsd:string" />
@@ -21,9 +21,9 @@
   <wsdl:message name="getPalabraOut">
     <wsdl:part name="return" type="xsd:string" />
   </wsdl:message>
-  <wsdl:portType name="ECCI_HolaMundoPort">
+  <wsdl:portType name="ECCI_AhorcadoPort">
     <wsdl:operation name="salude">
-      <documentation>HolaMundo::salude() Saluda al Mundo o a $this-&gt;nombre o saluda a $nombre si $nombre no es vacío.</documentation>
+      <documentation>Ahorcado::salude() Saluda al Mundo o a $this-&gt;nombre o saluda a $nombre si $nombre no es vacío.</documentation>
       <wsdl:input message="tns:saludeIn" />
       <wsdl:output message="tns:saludeOut" />
     </wsdl:operation>
@@ -43,47 +43,47 @@
       <wsdl:output message="tns:getPalabraOut" />
     </wsdl:operation>
   </wsdl:portType>
-  <wsdl:binding name="ECCI_HolaMundoBinding" type="tns:ECCI_HolaMundoPort">
+  <wsdl:binding name="ECCI_AhorcadoBinding" type="tns:ECCI_AhorcadoPort">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
     <wsdl:operation name="salude">
-      <soap:operation soapAction="urn:ECCI_HolaMundo#HolaMundo#salude" />
+      <soap:operation soapAction="urn:ECCI_Ahorcado#Ahorcado#salude" />
       <wsdl:input>
-        <soap:body use="encoded" namespace="urn:ECCI_HolaMundo" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+        <soap:body use="encoded" namespace="urn:ECCI_Ahorcado" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
       </wsdl:input>
       <wsdl:output>
-        <soap:body use="encoded" namespace="urn:ECCI_HolaMundo" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+        <soap:body use="encoded" namespace="urn:ECCI_Ahorcado" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="servidorEstampillaDeTiempo">
-      <soap:operation soapAction="urn:ECCI_HolaMundo#HolaMundo#servidorEstampillaDeTiempo" />
+      <soap:operation soapAction="urn:ECCI_Ahorcado#Ahorcado#servidorEstampillaDeTiempo" />
       <wsdl:input>
-        <soap:body use="encoded" namespace="urn:ECCI_HolaMundo" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+        <soap:body use="encoded" namespace="urn:ECCI_Ahorcado" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
       </wsdl:input>
       <wsdl:output>
-        <soap:body use="encoded" namespace="urn:ECCI_HolaMundo" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+        <soap:body use="encoded" namespace="urn:ECCI_Ahorcado" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ultimoSaludo">
-      <soap:operation soapAction="urn:ECCI_HolaMundo#HolaMundo#ultimoSaludo" />
+      <soap:operation soapAction="urn:ECCI_Ahorcado#Ahorcado#ultimoSaludo" />
       <wsdl:input>
-        <soap:body use="encoded" namespace="urn:ECCI_HolaMundo" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+        <soap:body use="encoded" namespace="urn:ECCI_Ahorcado" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
       </wsdl:input>
       <wsdl:output>
-        <soap:body use="encoded" namespace="urn:ECCI_HolaMundo" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+        <soap:body use="encoded" namespace="urn:ECCI_Ahorcado" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getPalabra">
-      <soap:operation soapAction="urn:ECCI_HolaMundo#HolaMundo#getPalabra" />
+      <soap:operation soapAction="urn:ECCI_Ahorcado#Ahorcado#getPalabra" />
       <wsdl:input>
-        <soap:body use="encoded" namespace="urn:ECCI_HolaMundo" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+        <soap:body use="encoded" namespace="urn:ECCI_Ahorcado" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
       </wsdl:input>
       <wsdl:output>
-        <soap:body use="encoded" namespace="urn:ECCI_HolaMundo" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+        <soap:body use="encoded" namespace="urn:ECCI_Ahorcado" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
       </wsdl:output>
     </wsdl:operation>
   </wsdl:binding>
-  <wsdl:service name="ECCI_HolaMundoService">
-    <wsdl:port name="ECCI_HolaMundoPort" binding="tns:ECCI_HolaMundoBinding">
+  <wsdl:service name="ECCI_AhorcadoService">
+    <wsdl:port name="ECCI_AhorcadoPort" binding="tns:ECCI_AhorcadoBinding">
       <soap:address location="http://titanic.ecci.ucr.ac.cr/~eb50946/prueba/" />
     </wsdl:port>
   </wsdl:service>
