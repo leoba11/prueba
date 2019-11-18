@@ -115,18 +115,19 @@ class Ahorcado {
 	 * @return int 
 	 **/
 	public function verificarSiGano(){
-		$auxCont = 0;
-		$arrayPalabra = str_split($this->exitos);
-		foreach($arrayPalabra as $val){
-			if($val == "T"){
-				$auxCont = $auxCont + 1;
-			}
-		}
-		if($auxCont == $strlen($this->arrayPalabra)){
-			$this->gano = 1;
-		}
+		// $auxCont = 0;
+		// $arrayPalabra = str_split($this->exitos);
+		// foreach($arrayPalabra as $val){
+		// 	if($val == "T"){
+		// 		$auxCont = $auxCont + 1;
+		// 	}
+		// }
+		// if($auxCont == $strlen($this->arrayPalabra)){
+		// 	$this->gano = 1;
+		// }
 
-		return $this->gano;
+		// return $this->gano;
+		return $this->turnosRestantes;
 	}
 
 	/**
