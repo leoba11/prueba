@@ -116,12 +116,12 @@ class Ahorcado {
 	public function verificarSiGano(){
 		$gano = 0;
 		$auxCont = 0;
-		foreach($this->$arrayExitos as $val){
+		foreach($this->arrayExitos as $val){
 			if($val == 1){
 				$auxCont = $auxCont + 1;
 			}
 		}
-		if($auxCont == $strlen($this->$arrayExitos)){
+		if($auxCont == $strlen($this->arrayExitos)){
 			$gano = 1;
 		}
 
