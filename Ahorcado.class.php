@@ -49,7 +49,7 @@
 class Ahorcado {
 	private $palabraSeleccionada = "";
 	private $turnosRestantes = 5;
-	private $exitos = "TTTT";
+	private $exitos = "";
 	private $gano = 0;
 	private $palabras = array(
 		1 => "perro",
