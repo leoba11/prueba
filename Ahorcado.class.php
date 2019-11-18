@@ -126,7 +126,7 @@ class Ahorcado {
 			$this->gano = 1;
 		}
 
-		return $auxCont;
+		return $this->gano;
 	}
 
 	/**
