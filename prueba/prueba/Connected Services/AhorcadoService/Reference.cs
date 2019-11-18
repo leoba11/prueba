@@ -15,32 +15,32 @@ namespace prueba.AhorcadoService {
     [System.ServiceModel.ServiceContractAttribute(Namespace="urn:ECCI_Ahorcado", ConfigurationName="AhorcadoService.ECCI_AhorcadoPort")]
     public interface ECCI_AhorcadoPort {
         
-        [System.ServiceModel.OperationContractAttribute(Action="urn:ECCI_Ahorcado#Ahorcado#salude", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="urn:ECCI_Ahorcado#Ahorcado#verificarLetra", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        string salude(string nombre);
+        string verificarLetra(string letra);
         
-        [System.ServiceModel.OperationContractAttribute(Action="urn:ECCI_Ahorcado#Ahorcado#salude", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="urn:ECCI_Ahorcado#Ahorcado#verificarLetra", ReplyAction="*")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        System.Threading.Tasks.Task<string> saludeAsync(string nombre);
+        System.Threading.Tasks.Task<string> verificarLetraAsync(string letra);
         
-        [System.ServiceModel.OperationContractAttribute(Action="urn:ECCI_Ahorcado#Ahorcado#servidorEstampillaDeTiempo", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="urn:ECCI_Ahorcado#Ahorcado#getIntentosRestantes", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        string servidorEstampillaDeTiempo();
+        int getIntentosRestantes();
         
-        [System.ServiceModel.OperationContractAttribute(Action="urn:ECCI_Ahorcado#Ahorcado#servidorEstampillaDeTiempo", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="urn:ECCI_Ahorcado#Ahorcado#getIntentosRestantes", ReplyAction="*")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        System.Threading.Tasks.Task<string> servidorEstampillaDeTiempoAsync();
+        System.Threading.Tasks.Task<int> getIntentosRestantesAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="urn:ECCI_Ahorcado#Ahorcado#ultimoSaludo", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="urn:ECCI_Ahorcado#Ahorcado#verificarSiGano", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        string ultimoSaludo();
+        int verificarSiGano();
         
-        [System.ServiceModel.OperationContractAttribute(Action="urn:ECCI_Ahorcado#Ahorcado#ultimoSaludo", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="urn:ECCI_Ahorcado#Ahorcado#verificarSiGano", ReplyAction="*")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        System.Threading.Tasks.Task<string> ultimoSaludoAsync();
+        System.Threading.Tasks.Task<int> verificarSiGanoAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="urn:ECCI_Ahorcado#Ahorcado#getPalabra", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
@@ -79,28 +79,28 @@ namespace prueba.AhorcadoService {
                 base(binding, remoteAddress) {
         }
         
-        public string salude(string nombre) {
-            return base.Channel.salude(nombre);
+        public string verificarLetra(string letra) {
+            return base.Channel.verificarLetra(letra);
         }
         
-        public System.Threading.Tasks.Task<string> saludeAsync(string nombre) {
-            return base.Channel.saludeAsync(nombre);
+        public System.Threading.Tasks.Task<string> verificarLetraAsync(string letra) {
+            return base.Channel.verificarLetraAsync(letra);
         }
         
-        public string servidorEstampillaDeTiempo() {
-            return base.Channel.servidorEstampillaDeTiempo();
+        public int getIntentosRestantes() {
+            return base.Channel.getIntentosRestantes();
         }
         
-        public System.Threading.Tasks.Task<string> servidorEstampillaDeTiempoAsync() {
-            return base.Channel.servidorEstampillaDeTiempoAsync();
+        public System.Threading.Tasks.Task<int> getIntentosRestantesAsync() {
+            return base.Channel.getIntentosRestantesAsync();
         }
         
-        public string ultimoSaludo() {
-            return base.Channel.ultimoSaludo();
+        public int verificarSiGano() {
+            return base.Channel.verificarSiGano();
         }
         
-        public System.Threading.Tasks.Task<string> ultimoSaludoAsync() {
-            return base.Channel.ultimoSaludoAsync();
+        public System.Threading.Tasks.Task<int> verificarSiGanoAsync() {
+            return base.Channel.verificarSiGanoAsync();
         }
         
         public string getPalabra() {

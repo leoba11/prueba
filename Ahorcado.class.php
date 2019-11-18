@@ -94,7 +94,7 @@ class Ahorcado {
 				$this->exitos = $this->exitos + "F";
 			}
 		}
-		return $verificacion
+		return $verificacion;
 	}
 
 
