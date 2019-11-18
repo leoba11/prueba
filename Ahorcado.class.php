@@ -115,7 +115,7 @@ class Ahorcado {
 	 * @return int 
 	 **/
 	public function verificarSiGano(){
-		// $auxCont = 0;
+		$auxCont = 0;
 		// $arrayPalabra = str_split($this->exitos);
 		// foreach($arrayPalabra as $val){
 		// 	if($val == "T"){
@@ -126,8 +126,7 @@ class Ahorcado {
 		// 	$this->gano = 1;
 		// }
 
-		// return $this->gano;
-		return $this->turnosRestantes;
+		return $auxCont;
 	}
 
 	/**
