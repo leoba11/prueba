@@ -115,11 +115,11 @@ class Ahorcado {
 	 * @return int 
 	 **/
 	public function verificarSiGano(){
-		$auxCont = 1;
+		$auxCont = 0;
 		$arrayPalabra = str_split($this->exitos);
 
 		for($i = 0; $i < count($arrayPalabra); $i++) {            
-			if($arrayPalabra[i] == "T"){
+			if($arrayPalabra[$i] == "T"){
 				$auxCont = $auxCont + 1;
 			}	       
 		}
