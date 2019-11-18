@@ -117,16 +117,18 @@ class Ahorcado {
 	public function verificarSiGano(){
 		$auxCont = 0;
 		$arrayPalabra = str_split($this->exitos);
-		foreach($arrayPalabra as $val){
-			if($val == "T"){
+
+		for($i = 0; $i < count($arrayPalabra); $i++) {            
+			if($arrayPalabra[i] == "T"){
 				$auxCont = $auxCont + 1;
-			}
+			}	       
 		}
-		if($auxCont == $strlen($this->arrayPalabra)){
+
+		if( $auxCont == count($arrayPalabra) ){
 			$this->gano = 1;
 		}
 
-		return $auxCont;
+		return $this->gano;
 	}
 
 	/**
