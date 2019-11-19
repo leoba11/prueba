@@ -83,20 +83,18 @@ class Ahorcado {
 	 * @return string 
 	 **/
 	public function verificarLetra($letra = ''){
-		$this->turnosRestantes =  $this->turnosRestantes - 1;
-		$verificacion = "";
 		
 		$arrayPalabra = str_split($this->palabraSeleccionada);
-		foreach($arrayPalabra as $char){
-			if($letra == $char){
-				$verificacion = $verificacion."T";
-				$this->$exitos = $this->$exitos."T";
+
+		for($i = 0; $i < strlen($this->palabraSeleccionada); $i++)
+		{
+			if($arrayPalabra[$i] == $letra){
+				$this->palabraOculta[$i] == $letra;				
 			}else{
-				$verificacion = $verificacion."F";
-				$this->exitos = $this->exitos."F";
+				$this->turnosRestantes = $this->turnosRestantes - 1;
 			}
 		}
-		return $verificacion;
+		return $this->palabraOculta;
 	}
 
 
