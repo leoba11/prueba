@@ -85,11 +85,17 @@ class Ahorcado {
 	public function verificarLetra($letra = ""){
 		
 		$arrayPalabra = str_split($this->palabraSeleccionada);
+		$aux = FALSE;		
 
 		for($i = 0; $i < strlen($this->palabraSeleccionada); $i++)
 		{
 			if($arrayPalabra[$i] == $letra){
-				$this->palabraOculta[$i] = $letra;				
+				$this->palabraOculta[$i] = $letra;
+				$aux = TRUE;				
+			}
+
+			if($aux == FALSE){
+				$this->turnosRestantes -= 1; 
 			}
 		}
 		return $this->palabraOculta;
