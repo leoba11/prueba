@@ -82,7 +82,7 @@ class Ahorcado {
 	 * @param string $letra
 	 * @return string 
 	 **/
-	public function verificarLetra($letra = ''){
+	public function verificarLetra($letra = ""){
 		
 		$arrayPalabra = str_split($this->palabraSeleccionada);
 
@@ -90,8 +90,6 @@ class Ahorcado {
 		{
 			if($arrayPalabra[$i] == $letra){
 				$this->palabraOculta[$i] = $letra;				
-			}else{
-				$this->turnosRestantes = $this->turnosRestantes - 1;
 			}
 		}
 		return $this->palabraOculta;
