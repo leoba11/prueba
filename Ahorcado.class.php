@@ -89,7 +89,7 @@ class Ahorcado {
 		for($i = 0; $i < strlen($this->palabraSeleccionada); $i++)
 		{
 			if($arrayPalabra[$i] == $letra){
-				$this->palabraOculta[$i] == $letra;				
+				$this->palabraOculta[$i] = $letra;				
 			}else{
 				$this->turnosRestantes = $this->turnosRestantes - 1;
 			}
