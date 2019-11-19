@@ -93,10 +93,9 @@ class Ahorcado {
 				$this->palabraOculta[$i] = $letra;
 				$aux = TRUE;				
 			}
-
-			if($aux == FALSE){
-				$this->turnosRestantes -= 1; 
-			}
+		}
+		if($aux == FALSE){
+			$this->turnosRestantes -= 1; 
 		}
 		return $this->palabraOculta;
 	}
