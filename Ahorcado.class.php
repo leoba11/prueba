@@ -136,7 +136,7 @@ class Ahorcado {
 	public function getPalabraOculta(){
 		for($i=0; $i < strlen($this->palabraSeleccionada); $i++)
 		{
-			$this->palabraOculta .= " _";
+			$this->palabraOculta .= "_";
 		}
 		return $this->palabraOculta ;
 	}
