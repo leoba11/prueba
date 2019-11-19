@@ -51,6 +51,18 @@
 		<part name="return" type="xsd:string"/>
 	</message>
 
+	<message name="guardarNombreIn">
+		<part name="nombre" type="xsd:string"/>
+	</message>
+
+	<message name="guardarNombreOut" />
+
+	<message name="getNombreIn"/>
+
+	<message name="getNombreOut">
+		<part name="return" type="xsd:string"/>
+	</message>
+
 	<!-- Puerto para comunicar con la clase Ahorcado, "ECCI_Ahorcado" -->
 
 	<portType name="ECCI_AhorcadoPort">
@@ -78,6 +90,16 @@
 			<documentation>HolaMundo::getPalabra() Devuelve la palabra seleccionada.</documentation>
 			<input message="tns:getPalabraIn"/>
 			<output message="tns:getPalabraOut"/>
+		</operation>
+		<operation name="guardarNombre">
+			<documentation>HolaMundo::guardarNombre() Devuelve la palabra seleccionada.</documentation>
+			<input message="tns:guardarNombreIn"/>
+			<output message="tns:guardarNombreOut"/>
+		</operation>
+		<operation name="getNombre">
+			<documentation>HolaMundo::getNombre() Devuelve la palabra seleccionada.</documentation>
+			<input message="tns:getNombreIn"/>
+			<output message="tns:getNombreOut"/>
 		</operation>
 	</portType>
 
@@ -155,6 +177,35 @@
 						   namespace="urn:ECCI_Ahorcado"/>
 			</output>
 		</operation>
+
+		<operation name="guardarNombre">
+			<soap:operation soapAction="urn:ECCI_Ahorcado#Ahorcado#guardarNombre"/>
+			<input>
+				<soap:body use="encoded"
+				           encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						   namespace="urn:ECCI_Ahorcado"/>
+			</input>
+			<output>
+				<soap:body use="encoded"
+				           encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						   namespace="urn:ECCI_Ahorcado"/>
+			</output>
+		</operation>
+
+		<operation name="getNombre">
+			<soap:operation soapAction="urn:ECCI_Ahorcado#Ahorcado#getNombre"/>
+			<input>
+				<soap:body use="encoded"
+				           encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						   namespace="urn:ECCI_Ahorcado"/>
+			</input>
+			<output>
+				<soap:body use="encoded"
+				           encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						   namespace="urn:ECCI_Ahorcado"/>
+			</output>
+		</operation>
+
 	</binding>
 
 	<!-- Punto de comunicación con la clase Ahorcado -->

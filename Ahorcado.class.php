@@ -48,6 +48,7 @@
  **/
 class Ahorcado {
 	private $palabraSeleccionada = "";
+	private $nombreJugador = "";
 	private $palabraOculta = "";
 	private $turnosRestantes = 5;
 	private $exitos = "";
@@ -144,6 +145,23 @@ class Ahorcado {
 	 **/
 	public function getPalabra(){
 		return $this->palabraSeleccionada;
+	}
+
+	/**
+	 * Ahorcado::guardarNombre() Guarda el nombre del jugador.
+	 * 
+	 **/
+	public function guardarNombre($nombre = ""){
+		$this->nombreJugador = $nombre;
+	}
+
+	/**
+	 * Ahorcado::getNombre() Devuelve el nombre del jugador.
+	 * 
+	 * @return string 
+	 **/
+	public function getNombre(){
+		return $this->nombreJugador;
 	}
 }
 
