@@ -48,6 +48,7 @@
  **/
 class Ahorcado {
 	private $palabraSeleccionada = "";
+	private $nombreJugador = "";
 	private $palabraOculta = "";
 	private $turnosRestantes = 5;
 	private $exitos = "";
@@ -82,17 +83,20 @@ class Ahorcado {
 	 * @param string $letra
 	 * @return string 
 	 **/
-	public function verificarLetra($letra = ''){
+	public function verificarLetra($letra = ""){
 		
 		$arrayPalabra = str_split($this->palabraSeleccionada);
+		$aux = FALSE;		
 
 		for($i = 0; $i < strlen($this->palabraSeleccionada); $i++)
 		{
 			if($arrayPalabra[$i] == $letra){
-				$this->palabraOculta[$i] == $letra;				
-			}else{
-				$this->turnosRestantes = $this->turnosRestantes - 1;
+				$this->palabraOculta[$i] = $letra;
+				$aux = TRUE;				
 			}
+		}
+		if($aux == FALSE){
+			$this->turnosRestantes -= 1; 
 		}
 		return $this->palabraOculta;
 	}
@@ -114,20 +118,11 @@ class Ahorcado {
 	 * @return int 
 	 **/
 	public function verificarSiGano(){
-		$auxCont = 0;
-		$arrayPalabra = str_split($this->exitos);
-
-		for($i = 0; $i < count($arrayPalabra); $i++) {            
-			if($arrayPalabra[$i] == "T"){
-				$auxCont = $auxCont + 1;
-			}	       
+		if($this->palabraOculta === $this->palabraSeleccionada){
+			return 1;
+		}else{
+			return 0;
 		}
-
-		if( $auxCont == count($arrayPalabra) ){
-			$this->gano = 1;
-		}
-
-		return $this->gano;
 	}
 
 	/**
@@ -138,7 +133,7 @@ class Ahorcado {
 	public function getPalabraOculta(){
 		for($i=0; $i < strlen($this->palabraSeleccionada); $i++)
 		{
-			$this->palabraOculta .= " _";
+			$this->palabraOculta .= "*";
 		}
 		return $this->palabraOculta ;
 	}
@@ -150,6 +145,23 @@ class Ahorcado {
 	 **/
 	public function   (){
 		return $this->palabraSeleccionada;
+	}
+
+	/**
+	 * Ahorcado::guardarNombre() Guarda el nombre del jugador.
+	 * 
+	 **/
+	public function guardarNombre($nombre = ""){
+		$this->nombreJugador = $nombre;
+	}
+
+	/**
+	 * Ahorcado::getNombre() Devuelve el nombre del jugador.
+	 * 
+	 * @return string 
+	 **/
+	public function getNombre(){
+		return $this->nombreJugador;
 	}
 }
 
