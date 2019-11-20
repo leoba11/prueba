@@ -145,7 +145,7 @@ class Ahorcado {
 	 * 
 	 * @return string 
 	 **/
-	public function   (){
+	public function getPalabra(){
 		return $this->palabraSeleccionada;
 	}
 
