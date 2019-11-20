@@ -53,6 +53,8 @@ class Ahorcado {
 	private $turnosRestantes = 5;
 	private $exitos = "";
 	private $gano = 0;
+	private $arraytiempos = [];
+	private $arrayNombreTiempo = [];
 	private $palabras = array(
 		1 => "perro",
 		2 => "gato",
@@ -162,6 +164,47 @@ class Ahorcado {
 	 **/
 	public function getNombre(){
 		return $this->nombreJugador;
+	}
+
+	/**
+	 * Ahorcado::guardarTiempo() guarda el tiempo del jugador si es de los mejores 10.
+	 *  
+	 **/
+	public function guardarTiempo($nombre = "", $tiempo = 0)
+	{
+		$nombreTiempo = $nombre + ":" + $tiempo
+		$archivo = fopen("mejoresTiempos.csv", "r+");
+		while (($this->arrayNombreTiempo = fgetcsv($archivo)) !== FALSE) {
+			for($i = 0; $i < count($this->arrayNombreTiempo); $i++){
+				$aux = explode(":", $this->arrayNombreTiempo);
+				$this->arraytiempos[$i]= $aux[1];
+			}
+
+			if($tiempo < $this->arraytiempos[$this->menorTiempo($arraytiempos)])
+			{
+				$this->arrayNombreTiempo[$this->menorTiempo($this->arraytiempos)] = $nombreTiempo;
+				ftruncate($archivo, 0);
+				fputcsv($archivo, $this->arrayNombreTiempo, ',');
+			}
+		}
+		fclose($archivo);
+	}
+
+	/**
+	 * Ahorcado::menorTiempo() Devuelve indice del menor tiempo en el array.
+	 * 
+	 * @return int 
+	 **/
+	public function menorTiempo(){
+		$menorTiempo = $this->$arraytiempos[0];
+		$index = 0;
+		for($i = 1; $i < count($arraytiempos); $i++){
+			if($menorTiempo > $arraytiempos[$i]){
+				$menorTiempo = $arraytiempos[$i];
+				$index = $i;
+			}
+		}
+		return $index;
 	}
 }
 

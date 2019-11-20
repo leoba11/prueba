@@ -63,6 +63,19 @@
 		<part name="return" type="xsd:string"/>
 	</message>
 
+	<message name="guardarTiempoIn">
+		<part name="nombre" type="xsd:string"/>
+		<part name="tiempo" type="xsd:int"/>
+	</message>
+
+	<message name="guardarTiempoOut" />
+
+	<message name="menorTiempoIn"/>
+
+	<message name="menorTiempoOut">
+		<part name="return" type="xsd:int"/>
+	</message>
+
 	<!-- Puerto para comunicar con la clase Ahorcado, "ECCI_Ahorcado" -->
 
 	<portType name="ECCI_AhorcadoPort">
@@ -100,6 +113,16 @@
 			<documentation>HolaMundo::getNombre() Devuelve la palabra seleccionada.</documentation>
 			<input message="tns:getNombreIn"/>
 			<output message="tns:getNombreOut"/>
+		</operation>
+		<operation name="guardarTiempo">
+			<documentation>HolaMundo::getNombre() Devuelve la palabra seleccionada.</documentation>
+			<input message="tns:guardarTiempoIn"/>
+			<output message="tns:guardarTiempoOut"/>
+		</operation>
+		<operation name="menorTiempo">
+			<documentation>HolaMundo::getNombre() Devuelve la palabra seleccionada.</documentation>
+			<input message="tns:menorTiempoIn"/>
+			<output message="tns:menorTiempoOut"/>
 		</operation>
 	</portType>
 
@@ -194,6 +217,34 @@
 
 		<operation name="getNombre">
 			<soap:operation soapAction="urn:ECCI_Ahorcado#Ahorcado#getNombre"/>
+			<input>
+				<soap:body use="encoded"
+				           encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						   namespace="urn:ECCI_Ahorcado"/>
+			</input>
+			<output>
+				<soap:body use="encoded"
+				           encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						   namespace="urn:ECCI_Ahorcado"/>
+			</output>
+		</operation>
+
+		<operation name="guardarTiempo">
+			<soap:operation soapAction="urn:ECCI_Ahorcado#Ahorcado#guardarTiempo"/>
+			<input>
+				<soap:body use="encoded"
+				           encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						   namespace="urn:ECCI_Ahorcado"/>
+			</input>
+			<output>
+				<soap:body use="encoded"
+				           encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+						   namespace="urn:ECCI_Ahorcado"/>
+			</output>
+		</operation>
+
+		<operation name="menorTiempo">
+			<soap:operation soapAction="urn:ECCI_Ahorcado#Ahorcado#menorTiempo"/>
 			<input>
 				<soap:body use="encoded"
 				           encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
