@@ -174,11 +174,11 @@ class Ahorcado {
 	{
 		$nombreTiempo = $nombre.":".$tiempo;
 		$archivo = fopen("mejoresTiempos.csv", "r+");
-		// while (($this->arrayNombreTiempo = fgetcsv($archivo)) !== FALSE) {
-		// 	for($i = 0; $i < count($this->arrayNombreTiempo); $i++){
-		// 		$aux = explode(":", $this->arrayNombreTiempo);
-		// 		$this->arraytiempos[$i]= $aux[1];
-		// 	}
+		while (($this->arrayNombreTiempo = fgetcsv($archivo)) !== FALSE) {
+			for($i = 0; $i < count($this->arrayNombreTiempo); $i++){
+				$aux = explode(":", $this->arrayNombreTiempo);
+				$this->arraytiempos[$i]= $aux[1];
+			}
 
 		// 	if($tiempo < $this->arraytiempos[$this->menorTiempo($this->arraytiempos)])
 		// 	{
