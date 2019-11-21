@@ -53,7 +53,7 @@ class Ahorcado {
 	private $turnosRestantes = 5;
 	private $exitos = "";
 	private $gano = 0;
-	private $arraytiempos = [];
+	private $arraytiempos = [10,25,84,24,88,74];
 	private $arrayNombreTiempo = [];
 	private $palabras = array(
 		1 => "perro",
