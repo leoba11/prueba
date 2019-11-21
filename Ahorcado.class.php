@@ -53,7 +53,7 @@ class Ahorcado {
 	private $turnosRestantes = 5;
 	private $exitos = "";
 	private $gano = 0;
-	private $arraytiempos = [10,14,25,11,58,24];
+	private $arraytiempos = [];
 	private $arrayNombreTiempo = [];
 	private $palabras = array(
 		1 => "perro",
@@ -196,6 +196,17 @@ class Ahorcado {
 	 * @return int 
 	 **/
 	public function mayorTiempo(){
+
+
+		$archivo = fopen("mejoresTiempos.csv", "r");
+		while (($this->arrayNombreTiempo = fgetcsv($archivo)) !== FALSE) {
+			for($i = 0; $i < count($this->arrayNombreTiempo); $i++){
+				$aux = explode(":", $this->arrayNombreTiempo);
+				$this->arraytiempos[$i]= $aux[1];
+			}
+		}
+		fclose($archivo);
+
 		$mayorTiempo = $this->arraytiempos[0];
 		$index = 0;
 		for($i = 1; $i < count($this->arraytiempos); $i++){
