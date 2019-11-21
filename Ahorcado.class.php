@@ -202,21 +202,20 @@ class Ahorcado {
 		//$index= count($this->arrayNombreTiempo);
 		// while (($this->arrayNombreTiempo = fgetcsv($archivo)) !== FALSE) {
 		for($i = 0; $i < count($this->arrayNombreTiempo); $i++){
-			$aux = explode(":", $this->arrayNombreTiempo);
-			$this->arraytiempos[$i]= $aux[1];
-			$index .= $this->arraytiempos[$i];
+			$aux = explode(":", $this->arrayNombreTiempo[$i]);
+			$this->arraytiempos[$i]= $aux[1]; 
 		}
 		// }
 		fclose($archivo);
 		
-		// $mayorTiempo = $this->arraytiempos[0];
-		// for($i = 1; $i < count($this->arraytiempos); $i++){
-		// 	if($mayorTiempo < $this->arraytiempos[$i]){
-		// 		$mayorTiempo = $this->arraytiempos[$i];
-		// 		$index = $i;
-		// 	}
-		// }
-		return $this->arrayNombreTiempo[0];
+		$mayorTiempo = $this->arraytiempos[0];
+		for($i = 1; $i < count($this->arraytiempos); $i++){
+			if($mayorTiempo < $this->arraytiempos[$i]){
+				$mayorTiempo = $this->arraytiempos[$i];
+				$index = $i;
+			}
+		}
+		return $index;
 	}
 }
 
