@@ -170,19 +170,33 @@ class Ahorcado {
 	 * Ahorcado::guardarTiempo() guarda el tiempo del jugador si es de los mejores 10.
 	 *  
 	 **/
-	public function guardarTiempo($nombre = "", $tiempo = 0)
+	public function guardarTiempo()
 	{
-		$nombreTiempo = $nombre.":".(string)$tiempo;
-		$this->arrayNombreTiempo[count($this->arrayNombreTiempo)-1] = $nombreTiempo;
+		// $nombreTiempo = $nombre.":".(string)$tiempo;
+		// $this->arrayNombreTiempo[count($this->arrayNombreTiempo)-1] = $nombreTiempo;
 
-		$archivo = fopen("mejoresTiempos.csv", "w+");
-			//ftruncate($archivo, 0);
-			//fwrite($archivo, "");
-			//fputcsv($archivo, $this->arrayNombreTiempo, ',');
-			foreach ($this->arrayNombreTiempo as $fields) {
-				fputcsv($archivo, $fields);
-			}
-		fclose($archivo);
+		// $archivo = fopen("mejoresTiempos.csv", "w+");
+		// 	//ftruncate($archivo, 0);
+		// 	//fwrite($archivo, "");
+		// 	//fputcsv($archivo, $this->arrayNombreTiempo, ',');
+		// 	foreach ($this->arrayNombreTiempo as $fields) {
+		// 		fputcsv($archivo, $fields);
+		// 	}
+		// fclose($archivo);
+
+		$list = array (
+			array('aaa', 'bbb', 'ccc', 'dddd'),
+			array('123', '456', '789'),
+			array('"aaa"', '"bbb"')
+		);
+		
+		$fp = fopen('mejoresTiempos.csv', 'w');
+		
+		foreach ($list as $fields) {
+			fputcsv($fp, $fields);
+		}
+		
+		fclose($fp);
 	}
 
 	/**
