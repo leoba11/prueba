@@ -175,43 +175,11 @@ class Ahorcado {
 		$nombreTiempo = $nombre.":".(string)$tiempo;
 		$this->arrayNombreTiempo[count($this->arrayNombreTiempo)-1] = $nombreTiempo;
 
-		$archivo = fopen("mejoresTiempos.csv", "w");
-			ftruncate($archivo, 0);
-			fputcsv($archivo, $this->arrayNombreTiempo, ',');
+		$archivo = fopen("mejoresTiempos.csv", "w+");
+			//ftruncate($archivo, 0);
+			fwrite($archivo, "");
+			//fputcsv($archivo, $this->arrayNombreTiempo, ',');
 		fclose($archivo);
-
-		
-		//$this->arraytiempos[count($this->arraytiempos)-1] = (string)
-		// $auxTiempos = FALSE;
-		// $copyArray = $this->arraytiempo;
-		// $archivo = fopen("mejoresTiempos.csv", "w");
-		// ftruncate($archivo, 0);
-		// for($i = 0; $i < count($this->arraytiempo); $i++){
-			
-		// 	$auxArray = array($nombre.":"(string)$tiempo);
-			
-		// 	if((int)$this->arraytiempo[$i] >= $tiempo){
-		// 		fputcsv($archivo, $auxArray, ',');
-		// 	}
-		// }
-		
-		// $nombreTiempo = $nombre.":".$tiempo;
-		// $archivo = fopen("mejoresTiempos.csv", "w");
-		// while (($this->arrayNombreTiempo = fgetcsv($archivo)) !== FALSE) {
-		// 	for($i = 0; $i < count($this->arrayNombreTiempo); $i++){
-		// 		$aux = explode(":", $this->arrayNombreTiempo);
-		// 		$this->arraytiempos[$i]= $aux[1];
-		// 	}
-		// 	$menor = $this->mayorTiempo($this->arraytiempos);
-		// 	if($tiempo < $this->arraytiempos[$menor])
-		// 	{
-		// 		$this->arrayNombreTiempo[$this->mayorTiempo($this->arraytiempos)] = $nombreTiempo;
-		// 		ftruncate($archivo, 0);
-		// 		fputcsv($archivo, $this->arrayNombreTiempo, ',');
-		// 	}
-		// }
-		// fclose($archivo);
-
 	}
 
 	/**
