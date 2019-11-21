@@ -173,7 +173,7 @@ class Ahorcado {
 	public function guardarTiempo($nombre = "", $tiempo = 0)
 	{
 		$nombreTiempo = $nombre.":".$tiempo;
-		// $archivo = fopen("mejoresTiempos.csv", "r+");
+		$archivo = fopen("mejoresTiempos.csv", "r+");
 		// while (($this->arrayNombreTiempo = fgetcsv($archivo)) !== FALSE) {
 		// 	for($i = 0; $i < count($this->arrayNombreTiempo); $i++){
 		// 		$aux = explode(":", $this->arrayNombreTiempo);
@@ -187,7 +187,7 @@ class Ahorcado {
 		// 		fputcsv($archivo, $this->arrayNombreTiempo, ',');
 		// 	}
 		// }
-		// fclose($archivo);
+		fclose($archivo);
 	}
 
 	/**
