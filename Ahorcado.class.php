@@ -204,10 +204,11 @@ class Ahorcado {
 		for($i = 0; $i < count($this->arrayNombreTiempo); $i++){
 			$aux = explode(":", $this->arrayNombreTiempo);
 			$this->arraytiempos[$i]= $aux[1];
+			$index .= $this->arraytiempos[$i];
 		}
 		// }
 		fclose($archivo);
-		$index = count($this->arraytiempos);
+		
 		// $mayorTiempo = $this->arraytiempos[0];
 		// for($i = 1; $i < count($this->arraytiempos); $i++){
 		// 	if($mayorTiempo < $this->arraytiempos[$i]){
