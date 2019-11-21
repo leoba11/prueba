@@ -53,7 +53,7 @@ class Ahorcado {
 	private $turnosRestantes = 5;
 	private $exitos = "";
 	private $gano = 0;
-	private $arraytiempos = [];
+	private $arraytiempos = [10,14,25,11,58,24];
 	private $arrayNombreTiempo = [];
 	private $palabras = array(
 		1 => "perro",
@@ -179,10 +179,10 @@ class Ahorcado {
 				$aux = explode(":", $this->arrayNombreTiempo);
 				$this->arraytiempos[$i]= $aux[1];
 			}
-			$menor = $this->menorTiempo($this->arraytiempos);
+			$menor = $this->mayorTiempo($this->arraytiempos);
 			if($tiempo < $this->arraytiempos[$menor])
 			{
-				$this->arrayNombreTiempo[$this->menorTiempo($this->arraytiempos)] = $nombreTiempo;
+				$this->arrayNombreTiempo[$this->mayorTiempo($this->arraytiempos)] = $nombreTiempo;
 				ftruncate($archivo, 0);
 				fputcsv($archivo, $this->arrayNombreTiempo, ',');
 			}
@@ -191,16 +191,16 @@ class Ahorcado {
 	}
 
 	/**
-	 * Ahorcado::menorTiempo() Devuelve indice del menor tiempo en el array.
+	 * Ahorcado::mayorTiempo() Devuelve indice del menor tiempo en el array.
 	 * 
 	 * @return int 
 	 **/
-	public function menorTiempo(){
-		$menorTiempo = $this->arraytiempos[0];
+	public function mayorTiempo(){
+		$mayorTiempo = $this->arraytiempos[0];
 		$index = 0;
 		for($i = 1; $i < count($this->arraytiempos); $i++){
-			if($menorTiempo > $this->arraytiempos[$i]){
-				$menorTiempo = $this->arraytiempos[$i];
+			if($mayorTiempo < $this->arraytiempos[$i]){
+				$mayorTiempo = $this->arraytiempos[$i];
 				$index = $i;
 			}
 		}

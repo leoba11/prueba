@@ -70,9 +70,9 @@
 
 	<message name="guardarTiempoOut" />
 
-	<message name="menorTiempoIn"/>
+	<message name="mayorTiempoIn"/>
 
-	<message name="menorTiempoOut">
+	<message name="mayorTiempoOut">
 		<part name="return" type="xsd:int"/>
 	</message>
 
@@ -119,10 +119,10 @@
 			<input message="tns:guardarTiempoIn"/>
 			<output message="tns:guardarTiempoOut"/>
 		</operation>
-		<operation name="menorTiempo">
+		<operation name="mayorTiempo">
 			<documentation>HolaMundo::getNombre() Devuelve la palabra seleccionada.</documentation>
-			<input message="tns:menorTiempoIn"/>
-			<output message="tns:menorTiempoOut"/>
+			<input message="tns:mayorTiempoIn"/>
+			<output message="tns:mayorTiempoOut"/>
 		</operation>
 	</portType>
 
@@ -243,8 +243,8 @@
 			</output>
 		</operation>
 
-		<operation name="menorTiempo">
-			<soap:operation soapAction="urn:ECCI_Ahorcado#Ahorcado#menorTiempo"/>
+		<operation name="mayorTiempo">
+			<soap:operation soapAction="urn:ECCI_Ahorcado#Ahorcado#mayorTiempo"/>
 			<input>
 				<soap:body use="encoded"
 				           encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
