@@ -196,16 +196,17 @@ class Ahorcado {
 	 * @return int 
 	 **/
 	public function mayorTiempo(){
-		$prueba = "";
 
 		$archivo = fopen("mejoresTiempos.csv", "r");
-		while (($this->arrayNombreTiempo = fgetcsv($archivo)) !== FALSE) {
-			for($i = 0; $i < count($this->arrayNombreTiempo); $i++){
-				$aux = explode(":", $this->arrayNombreTiempo);
-				$this->arraytiempos[$i]= $aux[1];
-				$index .= $this->arraytiempos[$i];
-			}
-		}
+		$this->arrayNombreTiempo = fgetcsv($archivo);
+		$index= count($this->arrayNombreTiempo);
+		// while (($this->arrayNombreTiempo = fgetcsv($archivo)) !== FALSE) {
+		// 	for($i = 0; $i < count($this->arrayNombreTiempo); $i++){
+		// 		$aux = explode(":", $this->arrayNombreTiempo);
+		// 		$this->arraytiempos[$i]= $aux[1];
+		// 		$index .= $this->arraytiempos[$i];
+		// 	}
+		// }
 		fclose($archivo);
 
 		// $mayorTiempo = $this->arraytiempos[0];
