@@ -180,12 +180,12 @@ class Ahorcado {
 				$this->arraytiempos[$i]= $aux[1];
 			}
 
-		// 	if($tiempo < $this->arraytiempos[$this->menorTiempo($this->arraytiempos)])
-		// 	{
+			if($tiempo < $this->arraytiempos[$this->menorTiempo($this->arraytiempos)])
+			{
 		// 		$this->arrayNombreTiempo[$this->menorTiempo($this->arraytiempos)] = $nombreTiempo;
 		// 		ftruncate($archivo, 0);
 		// 		fputcsv($archivo, $this->arrayNombreTiempo, ',');
-		// 	}
+			}
 		}
 		fclose($archivo);
 	}
