@@ -173,21 +173,21 @@ class Ahorcado {
 	public function guardarTiempo($nombre = "", $tiempo = 0)
 	{
 		$nombreTiempo = $nombre.":".$tiempo;
-		$archivo = fopen("mejoresTiempos.csv", "r+");
-		while (($this->arrayNombreTiempo = fgetcsv($archivo)) !== FALSE) {
-			for($i = 0; $i < count($this->arrayNombreTiempo); $i++){
-				$aux = explode(":", $this->arrayNombreTiempo);
-				$this->arraytiempos[$i]= $aux[1];
-			}
+		// $archivo = fopen("mejoresTiempos.csv", "r+");
+		// while (($this->arrayNombreTiempo = fgetcsv($archivo)) !== FALSE) {
+		// 	for($i = 0; $i < count($this->arrayNombreTiempo); $i++){
+		// 		$aux = explode(":", $this->arrayNombreTiempo);
+		// 		$this->arraytiempos[$i]= $aux[1];
+		// 	}
 
-			if($tiempo < $this->arraytiempos[$this->menorTiempo($this->arraytiempos)])
-			{
-				$this->arrayNombreTiempo[$this->menorTiempo($this->arraytiempos)] = $nombreTiempo;
-				ftruncate($archivo, 0);
-				fputcsv($archivo, $this->arrayNombreTiempo, ',');
-			}
-		}
-		fclose($archivo);
+		// 	if($tiempo < $this->arraytiempos[$this->menorTiempo($this->arraytiempos)])
+		// 	{
+		// 		$this->arrayNombreTiempo[$this->menorTiempo($this->arraytiempos)] = $nombreTiempo;
+		// 		ftruncate($archivo, 0);
+		// 		fputcsv($archivo, $this->arrayNombreTiempo, ',');
+		// 	}
+		// }
+		// fclose($archivo);
 	}
 
 	/**
