@@ -215,7 +215,7 @@ class Ahorcado {
 				$index = $i;
 			}
 		}
-		return $index;
+		return (int)$mayorTiempo;
 	}
 }
 
