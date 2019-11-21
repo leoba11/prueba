@@ -177,8 +177,8 @@ class Ahorcado {
 
 		$archivo = fopen("mejoresTiempos.csv", "w+");
 			//ftruncate($archivo, 0);
-			fwrite($archivo, "");
-			//fputcsv($archivo, $this->arrayNombreTiempo, ',');
+			//fwrite($archivo, "");
+			fputcsv($archivo, $this->arrayNombreTiempo, ',');
 		fclose($archivo);
 	}
 
