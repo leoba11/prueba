@@ -201,6 +201,7 @@ class Ahorcado {
 		$this->arrayNombreTiempo = fgetcsv($archivo);
 		//$index= count($this->arrayNombreTiempo);
 		// while (($this->arrayNombreTiempo = fgetcsv($archivo)) !== FALSE) {
+		$aux = [];
 		for($i = 0; $i < count($this->arrayNombreTiempo); $i++){
 			$aux = explode(":", $this->arrayNombreTiempo);
 			$this->arraytiempos[$i]= $aux[1];
