@@ -179,8 +179,8 @@ class Ahorcado {
 				$aux = explode(":", $this->arrayNombreTiempo);
 				$this->arraytiempos[$i]= $aux[1];
 			}
-
-			if($tiempo < $this->arraytiempos[$this->menorTiempo($this->arraytiempos)])
+			$menor = $this->menorTiempo($this->arraytiempos);
+			if($tiempo < $this->arraytiempos[$menor])
 			{
 		// 		$this->arrayNombreTiempo[$this->menorTiempo($this->arraytiempos)] = $nombreTiempo;
 		// 		ftruncate($archivo, 0);
