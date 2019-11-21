@@ -73,7 +73,7 @@
 	<message name="mayorTiempoIn"/>
 
 	<message name="mayorTiempoOut">
-		<part name="return" type="xsd:int"/>
+		<part name="return" type="xsd:string"/>
 	</message>
 
 	<!-- Puerto para comunicar con la clase Ahorcado, "ECCI_Ahorcado" -->
