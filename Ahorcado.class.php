@@ -216,7 +216,7 @@ class Ahorcado {
 		// 		$index = $i;
 		// 	}
 		// }
-		return $index;
+		return $aux[1];
 	}
 }
 
