@@ -198,9 +198,9 @@ class Ahorcado {
 	public function menorTiempo(){
 		$menorTiempo = $this->$arraytiempos[0];
 		$index = 0;
-		for($i = 1; $i < count($arraytiempos); $i++){
-			if($menorTiempo > $arraytiempos[$i]){
-				$menorTiempo = $arraytiempos[$i];
+		for($i = 1; $i < count($this->arraytiempos); $i++){
+			if($menorTiempo > $this->arraytiempos[$i]){
+				$menorTiempo = $this->arraytiempos[$i];
 				$index = $i;
 			}
 		}
