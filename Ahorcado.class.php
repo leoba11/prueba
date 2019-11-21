@@ -170,7 +170,7 @@ class Ahorcado {
 	 * Ahorcado::guardarTiempo() guarda el tiempo del jugador si es de los mejores 10.
 	 *  
 	 **/
-	public function guardarTiempo()
+	public function guardarTiempo(nombre = "", tiempo = 0)
 	{
 		$nombreTiempo = $nombre.":".(string)$tiempo;
 		$this->arrayNombreTiempo[count($this->arrayNombreTiempo)-1] = $nombreTiempo;
