@@ -63,9 +63,9 @@
 		<part name="return" type="xsd:string"/>
 	</message>
 
-	<message name="guardarTiempoIn" >
+	<message name="guardarTiempoIn">
 		<part name="nombre" type="xsd:string"/>
-		<part name="tiempo" type="xsd:int"/> -->
+		<part name="tiempo" type="xsd:int"/> 
 	</message>
 
 	<message name="guardarTiempoOut" />
