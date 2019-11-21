@@ -207,14 +207,14 @@ class Ahorcado {
 		}
 		// }
 		fclose($archivo);
-
-		$mayorTiempo = $this->arraytiempos[0];
-		for($i = 1; $i < count($this->arraytiempos); $i++){
-			if($mayorTiempo < $this->arraytiempos[$i]){
-				$mayorTiempo = $this->arraytiempos[$i];
-				$index = $i;
-			}
-		}
+		$index = count($this->arraytiempos);
+		// $mayorTiempo = $this->arraytiempos[0];
+		// for($i = 1; $i < count($this->arraytiempos); $i++){
+		// 	if($mayorTiempo < $this->arraytiempos[$i]){
+		// 		$mayorTiempo = $this->arraytiempos[$i];
+		// 		$index = $i;
+		// 	}
+		// }
 		return $index;
 	}
 }
