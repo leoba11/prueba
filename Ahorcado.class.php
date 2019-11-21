@@ -53,7 +53,7 @@ class Ahorcado {
 	private $turnosRestantes = 5;
 	private $exitos = "";
 	private $gano = 0;
-	private $arraytiempos = [10,25,84,24,88,74];
+	private $arraytiempos = [];
 	private $arrayNombreTiempo = [];
 	private $palabras = array(
 		1 => "perro",
@@ -182,9 +182,9 @@ class Ahorcado {
 			$menor = $this->menorTiempo($this->arraytiempos);
 			if($tiempo < $this->arraytiempos[$menor])
 			{
-		// 		$this->arrayNombreTiempo[$this->menorTiempo($this->arraytiempos)] = $nombreTiempo;
-		// 		ftruncate($archivo, 0);
-		// 		fputcsv($archivo, $this->arrayNombreTiempo, ',');
+				$this->arrayNombreTiempo[$this->menorTiempo($this->arraytiempos)] = $nombreTiempo;
+				ftruncate($archivo, 0);
+				fputcsv($archivo, $this->arrayNombreTiempo, ',');
 			}
 		}
 		fclose($archivo);
