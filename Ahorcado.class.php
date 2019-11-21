@@ -196,14 +196,14 @@ class Ahorcado {
 	 * @return int 
 	 **/
 	public function menorTiempo(){
-		$menorTiempo = $this->$arraytiempos[0];
+		$menorTiempo = $this->arraytiempos[0];
 		$index = 0;
-		// for($i = 1; $i < count($this->arraytiempos); $i++){
-		// 	if($menorTiempo > $this->arraytiempos[$i]){
-		// 		$menorTiempo = $this->arraytiempos[$i];
-		// 		$index = $i;
-		// 	}
-		// }
+		for($i = 1; $i < count($this->arraytiempos); $i++){
+			if($menorTiempo > $this->arraytiempos[$i]){
+				$menorTiempo = $this->arraytiempos[$i];
+				$index = $i;
+			}
+		}
 		return $index;
 	}
 }
