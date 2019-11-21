@@ -186,7 +186,7 @@ class Ahorcado {
 		// 		ftruncate($archivo, 0);
 		// 		fputcsv($archivo, $this->arrayNombreTiempo, ',');
 		// 	}
-		// }
+		}
 		fclose($archivo);
 	}
 
